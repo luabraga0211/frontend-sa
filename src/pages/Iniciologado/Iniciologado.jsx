@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
+function Gotocadastro() {
+    window.location.href = '/Cadastro'
+} 
 
 const Iniciologado = () => {
     return (
         <div>
             <div className="navbar">
-                <button>
-                    Fazer Novo Cadastro
-                </button>
+                <button onClick={Gotocadastro}>Fazer Novo Cadastro</button>
                 <button>
                     Ver Cadastros
                 </button>
