@@ -22,7 +22,7 @@ const Inicio = () => {
                         <p>AccessTrack Solutions</p>
                     </div>
                 </div>
-                <button className="botao-funcao2">Entre em Contato</button>
+                <button className="botaofuncao2">Entre em Contato</button>
                 <p className="footer-text">Caso queira contratar nossos serviços entre em contato</p>
             </div>
         </div>
