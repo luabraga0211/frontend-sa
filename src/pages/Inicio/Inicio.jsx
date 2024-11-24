@@ -6,10 +6,6 @@ function Gotologin() {
     window.location.href = '/Login'
 } 
 
-function Gotoabout() {
-    window.location.href = '/Aboutus'
-}
-
 const Inicio = () => {
     return (
         <div>
@@ -26,7 +22,7 @@ const Inicio = () => {
                         <p>AccessTrack Solutions</p>
                     </div>
                 </div>
-                <button className="botao-funcao2" onClick={Gotoabout}>Sobre Nós</button>
+                <button className="botao-funcao2">Entre em Contato</button>
                 <p className="footer-text">Caso queira contratar nossos serviços entre em contato</p>
             </div>
         </div>

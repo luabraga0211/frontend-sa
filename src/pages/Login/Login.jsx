@@ -22,10 +22,9 @@ const Login = () => {
     return (
         <div className="container">
             <form onSubmit={handleSubmit}>
-                <h1>ATSoluctions</h1>
-                <h2>Funcionario</h2> 
+                <h1>ATSoluctions</h1> 
                 <div className="input-campo">
-                    <input type="email" placeholder="Coloque a sua Matrícula" onChange={(e) => setUsername(e.target.value)} />
+                    <input type="name" placeholder="Coloque o seu nome" onChange={(e) => setUsername(e.target.value)} />
                     <FaUser className="icon" />
                 </div>
                 <div className="input-campo">
