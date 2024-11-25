@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cadastro.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignOutAlt, faUserPlus, faList, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,8 @@ const Cadastro = () => {
         senha: '',
     });
     const [isAddingFuncionario, setIsAddingFuncionario] = useState(false);
+    const [cadastros, setCadastros] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     function adicionarFuncionario() {
         setIsAddingFuncionario(true);
@@ -23,15 +25,30 @@ const Cadastro = () => {
           });
           setIsAddingFuncionario(false);
           setNovoFuncionario({ name: '', senha: '' });
+          fetchCadastros(); // Fetch the updated list of cadastros
         } catch (error) {
           console.error('Erro ao salvar um novo funcionario:', error);
         }
       };
 
+    const fetchCadastros = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/Funcionarios');
+            const data = await response.json();
+            setCadastros(data);
+        } catch (error) {
+            console.error('Erro ao buscar cadastros:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchCadastros();
+    }, []);
+
     return (
     <div>
         <div className='navbar'>
-             <button onClick={() => { /* Add your navigation logic here */ }}>
+             <button onClick={() => setIsModalOpen(true)}>
              Ver Cadastros
             <FontAwesomeIcon icon={faList} />
             </button>
@@ -71,6 +88,36 @@ const Cadastro = () => {
                 <button onClick={salvarFuncionario}>Salvar</button>
             </div>
         </div>
+
+        {isModalOpen && (
+            <div className="modal">
+                <div className="modal-conteudo">
+                    <span className="close" onClick={() => setIsModalOpen(false)}>&times;</span>
+                    <h2>Cadastros</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome do Funcionário</th>
+                                <th>Senhas Do Funcionário</th>
+                                <th>Editar/Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cadastros.map((funcionario, index) => (
+                                <tr key={index}>
+                                    <td>{funcionario.name}</td>
+                                    <td>{funcionario.senha}</td>
+                                    <td className="action-buttons">
+                                        <button>Editar</button>
+                                        <button>Excluir</button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        )}
     </div>
     )
 }
