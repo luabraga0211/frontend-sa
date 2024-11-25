@@ -1,6 +1,6 @@
 .container {
     width: 450px;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(92, 92, 92, 0.15);
     backdrop-filter: blur(10px);
     border: 2px sold rgba(5, 4, 4, 0.2);
     padding: 40px; 
@@ -10,7 +10,7 @@
 .container h1 {
     text-align: center;
     font-size: 30px;
-    color: #000;
+    color: #fcfcfc;
 }
 
 .container .input-campo {
@@ -25,7 +25,7 @@
     height: 100%;
     background-color: transparent;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(87, 87, 87, 0.2);
     border-radius: 40px; 
     font-size: 13px;
     padding: 20px 45px;
@@ -108,4 +108,13 @@
 .error-msg p {
     color:red;
     font-weight: bold;
+}
+
+.error-msg {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
 }

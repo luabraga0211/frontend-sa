@@ -1,3 +1,9 @@
-LOGIN ADM: 
-admin
-admin@123
+BEM VINDO A NOSSA S.A, AQUI IREMOS APRESENTAR NOSSO PROJETO
+
+PARA INICIAR, INSTALE AS IMPORTAÇÕES NECESSARIAS UTILIZANDO NPM INSTALL
+
+1. npm install 
+2. npm i react-router-dom
+3. npm i pg
+4. npm i axios
+5. npm i 
