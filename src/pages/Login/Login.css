@@ -104,3 +104,8 @@
 .signup-link p span:hover {
     text-decoration: none; /* Remove o sublinhado quando o mouse passa por cima */
 }
+
+.error-msg p {
+    color:red;
+    font-weight: bold;
+}
