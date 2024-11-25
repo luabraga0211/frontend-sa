@@ -8,17 +8,16 @@ const Iniciologado = () => {
     return (
         <div>
             <div className="navbar">
-                <Link to="/cadastro"></Link>
-                <button>
-                    Ver Cadastros
-                </button>
-                <button>
-                    Controle de Entrada e Saída
-                </button>
+                <Link to="/cadastro">
+                    <button>Ver Cadastros</button>
+                </Link>
+                <button>Controle de Entrada e Saída</button>
             </div>
             <div className="icons">
                 <FontAwesomeIcon icon={faUser} className="icon" />
+                <Link to="/">
                 <FontAwesomeIcon icon={faSignOutAlt} className="icon" />
+                </Link>
             </div>
             <div className="conteudo">
                 <div className="text">
@@ -35,4 +34,4 @@ const Iniciologado = () => {
     );
 };
 
-export default Iniciologado
+export default Iniciologado;

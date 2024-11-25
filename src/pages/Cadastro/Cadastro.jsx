@@ -56,11 +56,18 @@ const Cadastro = () => {
             <button onClick={() => { /* Add your navigation logic here */ }}>
             Controle de Entrada e Saída
             <FontAwesomeIcon icon={faSignInAlt} />
-            </button>     
+            </button>
+            <Link to="/iniciologado">
+                    <button>Voltar Inicio
+                    <FontAwesomeIcon icon={faList} />
+                    </button>
+                </Link>     
         </div>
         <div className="icons">
                 <FontAwesomeIcon icon={faUserCircle} className="icon" />
+                <Link to="/">
                 <FontAwesomeIcon icon={faSignOutAlt} className="icon" />
+                </Link>
             </div>
         <div className="container">
             <div className='formulario'>
