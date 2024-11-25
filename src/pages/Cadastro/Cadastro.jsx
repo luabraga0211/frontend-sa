@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Cadastro.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignOutAlt, faUserPlus, faList, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Cadastro = () => {
     const [novoFuncionario, setNovoFuncionario] = useState({
