@@ -12,9 +12,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Inicio />} />
-      <Route path='/Login' element={<Login />} />
-      <Route path='/Iniciologado' element={<Iniciologado />} />
-      <Route path='/Cadastro' element={<Cadastro />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/iniciologado' element={<Iniciologado />} />
+      <Route path='/cadastro' element={<Cadastro />} />
     </Routes>
     </BrowserRouter>
   )

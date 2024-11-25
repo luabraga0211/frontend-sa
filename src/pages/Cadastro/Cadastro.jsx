@@ -18,7 +18,7 @@ const Cadastro = () => {
 
     const salvarFuncionario = async () => {
         try {
-          await fetch('http://localhost:3000/Funcionarios', {
+          await fetch('http://localhost:3000/funcionarios', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(novoFuncionario),
@@ -33,7 +33,7 @@ const Cadastro = () => {
 
     const fetchCadastros = async () => {
         try {
-            const response = await fetch('http://localhost:3000/Funcionarios');
+            const response = await fetch('http://localhost:3000/funcionarios');
             const data = await response.json();
             setCadastros(data);
         } catch (error) {

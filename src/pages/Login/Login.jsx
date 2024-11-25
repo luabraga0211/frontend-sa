@@ -2,10 +2,6 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { useState } from "react";
 import './Login.css';
 
-function Gotohome() {
-    window.location.href = '/Iniciologado'
-}
-
 const Login = () => {
 
     const [name, setName] = useState("");
@@ -40,7 +36,7 @@ const Login = () => {
                     <a href="">Esqueceu a senha</a>
                 </div>
 
-                <button onClick={Gotohome}>Entrar</button>
+                <Link to="/iniciologado">Entrar</Link>
             </form>
         </div>
     );
