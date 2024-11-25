@@ -8,13 +8,13 @@ function Gotohome() {
 
 const Login = () => {
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [senha, setSenha] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(username, password);
+        console.log(name, senha);
 
         console.log("Envio");
     };
@@ -24,11 +24,11 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <h1>ATSoluctions</h1> 
                 <div className="input-campo">
-                    <input type="name" placeholder="Coloque o seu nome" onChange={(e) => setUsername(e.target.value)} />
+                    <input type="name" placeholder="Coloque o seu nome" onChange={(e) => setName(e.target.value)} />
                     <FaUser className="icon" />
                 </div>
                 <div className="input-campo">
-                    <input type="password" placeholder="Coloque sua Senha" onChange={(e) => setPassword(e.target.value)} />
+                    <input type="password" placeholder="Coloque sua Senha" onChange={(e) => setSenha(e.target.value)} />
                     <FaLock className="icon" />
                 </div>
 
